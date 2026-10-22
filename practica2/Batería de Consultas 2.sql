@@ -32,6 +32,14 @@ ORDER BY coste_reparacion ASC;
 
 :: Ejercicio 5
 
+SELECT t.nombre AS nombre_tecnicos
+FROM tecnicos t
+JOIN reparaciones r ON r.id = t.id
+WHERE r.id IS null; 
+
+
+
+
 
 
 
