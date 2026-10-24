@@ -1,5 +1,3 @@
-
-
 -- Batería de Consultas 1:
 -- Para esta batería de preguntas está prohibido utilizar JOIN.
 
@@ -151,23 +149,6 @@ HAVING SUM(coste_reparacion) = (
         GROUP BY tecnico_id
     ) AS sub
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
