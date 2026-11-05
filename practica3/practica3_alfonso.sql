@@ -33,6 +33,10 @@ GRANT SELECT ON tienda_informatica.v_tecnicos_activos TO 'gestor_tienda'@'%';
 
 --Tarea 4: Consistencia y control con WITH CHECK OPTION --
 
+CREATE VIEW v_articulos_gama_baja AS SELECT id, nombre, precio, fabricante_id FROM articulos WHERE precio <= 50.00 WITH CHECK OPTION;
+
+
+--Tarea 5: Auditoría, Resolución de Incidencias y Reflexión Crítica (Apartado de Análisis y Razonamiento) --
 
 
 
