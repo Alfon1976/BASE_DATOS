@@ -27,6 +27,12 @@ SET DEFAULT ROLE 'rol_consultor' FOR 'auditor_externo'@'%';
 
 --Tarea 3: Seguridad mediante Vistas y Privilegios Granulares--
 
+CREATE VIEW v_tecnicos_activos AS SELECT id, nombre, especialidad FROM tecnicos;
+
+GRANT SELECT ON tienda_informatica.v_tecnicos_activos TO 'gestor_tienda'@'%';
+
+--Tarea 4: Consistencia y control con WITH CHECK OPTION --
+
 
 
 
