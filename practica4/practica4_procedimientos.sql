@@ -15,3 +15,18 @@ END //
 DELIMITER ;
 
 
+-- Ejercicio 2. Crear un procedimiento que obtenga los videojuegos desarrollados por Supercell.
+
+DELIMITER //
+
+CREATE PROCEDURE sp_videojuegos_supercell()
+BEGIN
+    SELECT j.id_juego, j.nombre_juego, d.nombre_desarrollador
+    FROM juego j
+    JOIN desarrollador_juego dj ON j.id_juego = dj.id_juego
+    JOIN desarrollador d ON dj.id_desarrollador = d.id_desarrollador
+    WHERE d.nombre_desarrollador = 'Supercell';
+END //
+
+
+DELIMITER ;
